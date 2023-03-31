@@ -1,6 +1,6 @@
 Name:		texlive-stepgreek
 Version:	57074
-Release:	1
+Release:	2
 Summary:	A free Times/Elsevier-style Greek font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/stepgreek
