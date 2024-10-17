@@ -3,7 +3,7 @@ Version:	57074
 Release:	2
 Summary:	A free Times/Elsevier-style Greek font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/stepgreek
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/stepgreek
 License:	ofl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stepgreek.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stepgreek.doc.r%{version}.tar.xz
