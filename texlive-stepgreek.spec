@@ -1,9 +1,10 @@
 %global tl_name stepgreek
 %global tl_revision 57074
+%global tl_version 3.0b1
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	3.0b1
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	A free Times/Elsevier-style Greek font
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stepgreek.r%{tl_
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stepgreek.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This is a beta version of the STEP Greek font. Only a regular face is
@@ -22,3 +24,10 @@ bold italic in the future. The font only supports LGR in TeX and is
 meant to serve as a Greek complement to a Times-like font such as STEP.
 The font supports polytonic Greek.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from stepgreek:
+Map STEPGreekTest.map
+TL_DROPIN_EOF
